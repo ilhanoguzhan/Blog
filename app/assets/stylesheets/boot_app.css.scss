@@ -1,0 +1,11 @@
+@import "bootstrap";
+
+.text_field {
+  @extend .form-control;
+}
+.field {
+  @extend .form-group;
+}
+.actions {
+  @extend .form-group;
+}
