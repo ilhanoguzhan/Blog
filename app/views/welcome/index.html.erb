@@ -5,7 +5,14 @@
   <p>To see the difference between static and fixed top navbars, just scroll.</p>
   <p>
     <%= link_to posts_path, :class => "btn btn-lg btn-primary" do %>
-        View posts &raquo;
+        View all posts &raquo;
     <% end %>
   </p>
 </div>
+
+<% @posts.each do |post| %>
+    <div class="jumbotron">
+      <h1><%= post.title %></h1>
+      <p><%= post.content %>.</p>
+    </div>
+<% end %>

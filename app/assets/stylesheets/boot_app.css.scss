@@ -9,3 +9,10 @@
 .actions {
   @extend .form-group;
 }
+
+input {
+  @extend .form-control;
+}
+textarea {
+  @extend .form-control;
+}
