@@ -29,7 +29,9 @@ gem 'jbuilder', '~> 1.2'
 
 
 gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git', :branch => '3'
-
+gem 'simple_form'
+gem 'country_select'
+gem 'habtm_generator', :group => :development
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
