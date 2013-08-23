@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: 91d8dc386fa12713f80a655484fbbf43438be95d
+  revision: 23c3af675301bbb5e2f52dfe6c28a27036595d42
   branch: 3
   specs:
     bootstrap-sass (3.0.0.0)
@@ -43,8 +43,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    country_select (1.2.0)
     erubis (2.7.0)
     execjs (2.0.0)
+    habtm_generator (0.1)
+      activerecord (> 3.1)
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.0)
@@ -88,6 +91,7 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
+    simple_form (1.4.1)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -118,11 +122,14 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass!
   coffee-rails (~> 4.0.0)
+  country_select
+  habtm_generator
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc
+  simple_form
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)

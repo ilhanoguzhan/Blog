@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130821091530) do
+ActiveRecord::Schema.define(version: 20130822192902) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.integer  "order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", force: true do |t|
     t.string   "commenter"
@@ -23,9 +30,35 @@ ActiveRecord::Schema.define(version: 20130821091530) do
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
+  create_table "pictures", force: true do |t|
+    t.string   "title"
+    t.string   "extension"
+    t.string   "file_size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+  end
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+  end
+
+  add_index "posts", ["category_id"], name: "index_posts_on_category_id"
+
+  create_table "posts_tags", id: false, force: true do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+  end
+
+  add_index "posts_tags", ["post_id", "tag_id"], name: "posts_tags_index", unique: true
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

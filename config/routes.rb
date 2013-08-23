@@ -1,4 +1,11 @@
 Blog::Application.routes.draw do
+  get "admin/dashboard"
+  resources :pictures
+
+  resources :tags
+
+  resources :categories
+
   resources :posts do
     resources :comments
   end
